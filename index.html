@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f1 input {
+            width: 25%;
+            height: 30px;
+            margin: 20px;
+        }
+        .f1 input[type="button"] {
+            background-color: greenyellow;
+            border: none;
+        }
+
+        .f2 input {
+            width: 70%;
+            margin: 10px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form name="f1" class="f1">
+        <input type="text" name="first" required>
+        <input type="button" name="move" value="move"  onclick="moveTxt()">
+        <input type="text" name="second">
+    </form>
+
+    <hr>
+
+    <form name="f2" class="f2">
+        <input type="text" name="third" onblur="addPlaceholder()">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

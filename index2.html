@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/b0f6ce1c29.js" crossorigin="anonymous"></script>
+    <style>
+        header {
+            width: auto;
+            height: 150px;
+            background-color: chartreuse;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            margin-left: 35%;
+            margin-top: 10%;
+            border: 1px solid black;
+        }
+        .block img {
+            position: relative;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            top: -50px;
+            margin-left: 38%;
+            background-color: white;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .block input {
+            margin-left: 38%;
+            width: 100px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: chartreuse;
+            height: 50px;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+        .footer i {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="index1.html" name="block" class="block">
+        <header></header>
+        <img name='image-' src="https://img.icons8.com/cotton/2x/user-male.png" alt="img">
+        <div class="text">
+        <h1 name='fullName'></h1>
+        <h2 name='userEmail'></h2>
+        <h3 name='gender'></h3>
+        <h4 name='position'></h4>
+    </div>
+        <input type="submit" value="sign out">
+        <div class="footer">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </form>
+
+    <script>
+        let f2 = document.forms.block;
+        let name = localStorage.getItem('firstName')
+        let surname = localStorage.getItem('secondName')
+        let email = localStorage.getItem('email')
+        let gender = localStorage.getItem('gender')
+        let position = localStorage.getItem('position')
+        function getName() {
+            let fullName = name + " " + surname
+            document.querySelector('h1').innerHTML = fullName
+        }
+        getName()
+        document.querySelector('h2').innerHTML = email
+        let x = document.querySelector('h3').innerHTML = gender
+        document.querySelector('h4').innerHTML = position
+
+        
+        function changeImg(src) {
+         if (x === 'woman') {
+            document.querySelector('img').src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd70eBFgWqriSQbLArr3fLkYswRnZ8dacXqA&usqp=CAU'
+        }  
+    }   
+    changeImg()   
+    </script>
+</body>
+</html>

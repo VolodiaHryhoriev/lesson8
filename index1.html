@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .f1 {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            margin-left: 35%;
+            margin-top: 10%;
+            border: 1px solid black;
+        }
+        .f1 input[type="radio"] {
+            margin: 10px;
+        }
+        .topPart {
+            background-color: chartreuse;
+            text-align: center;
+        }
+        .gender {
+            flex-direction: row;
+              
+        }
+        .Agree {
+            flex-direction: column;     
+        }
+        .signUp {
+            background-color: chartreuse;
+            width: 80%;
+            height: 40px;
+            margin-left: 10%;
+            border: none;
+            border-radius: 10px;
+        }
+        .text {
+            width: 100%;
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+
+    <form name="f1" class="f1" action="index2.html" method="POST">
+    <div class="topPart">
+        <h1>Create your account</h1>
+    </div>
+    
+        <h3>First Name</h3>
+        <input name="firstName" required type="text">
+        <h3>Second Name</h3>
+        <input name="secondName" required type="text">
+        <h3>Email adress</h3>
+        <input name="email" required type="email">
+            <br>
+    <div class="gender">
+        <input type="radio" name="gender" value="man">man
+        <input type="radio" name="gender" value="woman">woman
+    </div>
+    
+        <h3>Position</h3>
+        <select name="pos" class="pos">
+            <option value="frontend">frontend</option>
+            <option value="backend">backend</option>
+            <option value="QC/QA">QC/QA</option>
+        </select>
+        <br>
+        <div class="Agree">
+        <input name="agree" required type="checkbox">I agree....
+        <br>
+        <input type="submit" class="signUp" name="signUp" value="Sign up"></input>
+    </div>
+    </form>
+
+
+
+    <script src="script1.js"></script>
+</body>
+</html>
